@@ -11,7 +11,9 @@ use App\Http\Controllers\{
     MutasiController,
     SuratController,
     UserController,
-
+    DetailKartuKeluargaController,
+    SupportController,
+    
 
 };
 

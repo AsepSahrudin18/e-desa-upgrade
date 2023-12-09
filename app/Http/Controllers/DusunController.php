@@ -26,6 +26,10 @@ class DusunController extends Controller
     	return $this->form();
     }
 
+    // public function show($id){
+    //     dd('test');
+    // }
+
     public function edit($id)
     {
     	return $this->form($id);
@@ -80,7 +84,8 @@ class DusunController extends Controller
 
     public function destroy($id)
     {
-    	$dusun = $this->dusun->find($id);
+        // $dusun = Dusun::findOrFail($id);
+    	$dusun = $this->dusun->findOrFail($id);
     	$dusun->delete();
 
     	return redirect()->back();
