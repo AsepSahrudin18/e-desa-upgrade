@@ -29,7 +29,8 @@ class FileManager
 	            $i++;
 	        }
         }else{
-        	return $beforeName;
+        	// return $beforeName;
+			return 'hello';
         }
 	}
 
