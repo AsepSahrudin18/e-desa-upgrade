@@ -1,35 +1,35 @@
 @extends('_layouts.default')
 
 @section('content')
-<div class="content-header">
-    <div class="row">
-        <div class="col-md-6 ">
-            {{-- @include('_layout.breadcrumb') --}}
-        </div>
-        <div class="col-md-6">
-            @if(Auth::user()->role == 'pegawai')
-                <a href="{{url('kartukeluarga/create')}}" class="btn btn-primary float-md-right mt-0">
-                    <i class="icon-plus3"></i> Tambah
-                </a>
-            @endif
+    <div class="content-header">
+        <div class="row">
+            <div class="col-md-6 ">
+                {{-- @include('_layout.breadcrumb') --}}
+            </div>
+            <div class="col-md-6">
+                @if (Auth::user()->role == 'pegawai')
+                    <a href="{{ url('kartukeluarga/create') }}" class="btn btn-primary float-md-right mt-0">
+                        <i class="icon-plus3"></i> Tambah
+                    </a>
+                @endif
+            </div>
         </div>
     </div>
-</div>
-<div class="content-body">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card mb-0">
-                <div class="card-header">
-                    <h4 class="card-title">Daftar Kartu Keluarga</h4>
-                    <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
-                    <div class="heading-elements">
-                        <ul class="list-inline mb-0">
-                            {{-- <li><a data-action="collapse"><i class="icon-minus4"></i></a></li> --}}
-                            {{-- <li><a data-action="expand"><i class="icon-expand2"></i></a></li> --}}
-                        </ul>
+    <div class="content-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-0">
+                    <div class="card-header">
+                        <h4 class="card-title">Daftar Kartu Keluarga</h4>
+                        <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
+                        <div class="heading-elements">
+                            <ul class="list-inline mb-0">
+                                {{-- <li><a data-action="collapse"><i class="icon-minus4"></i></a></li> --}}
+                                {{-- <li><a data-action="expand"><i class="icon-expand2"></i></a></li> --}}
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                {{-- <div class="card-body collapse in">
+                    {{-- <div class="card-body collapse in">
                     <div class="card-block pb-0">
                         <form method="get">
                             <div class="row">
@@ -70,68 +70,77 @@
                         </form>
                     </div>
                 </div> --}}
-                <!-- <div class="card-body"> -->
-                <div class="card-block">
-                    <div class="table-responsive bg-white">
-                        <table class="table table-sm mb-0 table-bordered table-hover">
-                            <thead class="bg-primary bg-lighten text-white">
-                            <!-- <thead class="bg-lighten"> -->
-                                <tr>
-                                    <th width="20">No.</th>
-                                    <th>Nomor Kartu Keluarga</th>
-                                    <th>Nama Kepala Keluarga</th>
-                                    {{-- @if(Auth::user()->permission_actions) --}}
-                                    <th width="250" class="text-xs-center">Actions</th>
-                                    {{-- @endif --}}
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @forelse($kartukeluarga as $index => $item)
+                    <!-- <div class="card-body"> -->
+                    <div class="card-block">
+                        <div class="table-responsive bg-white">
+                            <table class="table table-sm mb-0 table-bordered table-hover">
+                                <thead class="bg-primary bg-lighten text-white">
+                                    <!-- <thead class="bg-lighten"> -->
                                     <tr>
-                                        <td>{{$index + 1}}</td>
-                                        <td>{{$item->nomor}}</td>
-                                        <td>{{$item->nama_penduduk}}</td>
-                                        <td class="text-xs-center">
-                                            <a href="{{route('detailkartukeluarga.index', ['kk' => $item->id])}}" class="btn btn-sm btn-blue">
-                                                <i class="icon-menu5"></i> Detail
-                                            </a>
-                                            @if(Auth::user()->role == 'pegawai')
-                                                <a href="{{route('kartukeluarga.edit',$item->id)}}" class="btn btn-sm btn-green">
-                                                    <i class="icon-pencil3"></i> Edit
-                                                </a>
-                                                <a href="{{ route('kartukeluarga.destroy',$item->id)}}"
-                                                    data-method="delete" data-confirm="Anda yakin akan menghapus data ini ?"
-                                                    class="btn btn-sm btn-danger" title="Hapus Data">
-                                                    <i class="icon-trash3"></i>
-                                                    Delete
-                                                </a>
-                                            @endif
-                                        </td>
+                                        <th width="20">No.</th>
+                                        <th>Nomor Kartu Keluarga</th>
+                                        <th>Nama Kepala Keluarga</th>
+                                        {{-- @if (Auth::user()->permission_actions) --}}
+                                        <th width="250" class="text-xs-center">Actions</th>
+                                        {{-- @endif --}}
                                     </tr>
-                                @empty
-                                     <tr class="bg-info bg-lighten-4">
-                                        <td colspan="4">
-                                            <strong class="text-info"><center>Data Kosong</center></strong>
-                                        </td>
-                                    </tr>
-                                @endforelse
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <!-- </div> -->
-            </div>
+                                </thead>
+                                <tbody>
+                                    @forelse($kartukeluarga as $index => $item)
+                                        <tr>
+                                            <td>{{ $index + 1 }}</td>
+                                            <td>{{ $item->nomor }}</td>
+                                            <td>{{ $item->nama_penduduk }}</td>
+                                            <td class="text-xs-center">
+                                                <a href="{{ route('detailkartukeluarga.index', ['kk' => $item->id]) }}"
+                                                    class="btn btn-sm btn-blue">
+                                                    <i class="icon-menu5"></i> Detail
+                                                </a>
+                                                @if (Auth::user()->role == 'pegawai')
+                                                    <a href="{{ route('kartukeluarga.edit', $item->id) }}"
+                                                        class="btn btn-sm btn-green">
+                                                        <i class="icon-pencil3"></i> Edit
+                                                    </a>
 
-            <div class="card-block pr-0">
-                <nav aria-label="Page navigation" class="text-xs-right">
-                    {{-- {!! $items->appends([
+                                                    <form action="{{ route('kartukeluarga.destroy', $item->id) }}"
+                                                        method="POST">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit" class="btn btn-sm btn-danger"
+                                                            title="Hapus Data">
+                                                            <i class="icon-trash3"></i>
+                                                            Delete
+                                                        </button>
+                                                    </form>
+                                                @endif
+                                            </td>
+                                        </tr>
+                                    @empty
+                                        <tr class="bg-info bg-lighten-4">
+                                            <td colspan="4">
+                                                <strong class="text-info">
+                                                    <center>Data Kosong</center>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                    @endforelse
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </div>
+
+                <div class="card-block pr-0">
+                    <nav aria-label="Page navigation" class="text-xs-right">
+                        {{-- {!! $items->appends([
                         'perpage' => request('perpage'),
                         'by'      => request('by'),
                         'q'       => request('q')
                     ])->links() !!} --}}
-                </nav>
+                    </nav>
+                </div>
             </div>
         </div>
     </div>
-</div>
 @endsection

@@ -29,7 +29,6 @@ class KartuKeluargaController extends Controller
     public function index()
     {
     	$kartukeluarga = $this->kartukeluarga->paginate(10);
-
     	return view('kartukeluarga.index', compact('kartukeluarga'));
     }
 
