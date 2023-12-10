@@ -16,7 +16,8 @@ class DusunController extends Controller
 
     public function index()
     {
-    	$dusun = $this->dusun->paginate(10);
+    	// $dusun = $this->dusun->paginate(10);
+        $dusun = Dusun::latest()->paginate();
 
     	return view('dusun.index', compact('dusun'));
     }
@@ -25,10 +26,6 @@ class DusunController extends Controller
     {
     	return $this->form();
     }
-
-    // public function show($id){
-    //     dd('test');
-    // }
 
     public function edit($id)
     {

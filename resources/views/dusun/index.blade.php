@@ -1,28 +1,5 @@
 @extends('_layouts.default')
 
-@section('script-bottom')
-    <script>
-        function isDelete() {
-            swal({
-                    title: "Are you sure?",
-                    text: "Once deleted, you will not be able to recover this imaginary file!",
-                    icon: "warning",
-                    buttons: true,
-                    dangerMode: true,
-                })
-                .then((willDelete) => {
-                    if (willDelete) {
-                        swal("Poof! Your imaginary file has been deleted!", {
-                            icon: "success",
-                        });
-                    } else {
-                        swal("Data ini tidak jadi di hapus.");
-                    }
-                });
-        }
-    </script>
-@endsection
-
 @section('content')
     <div class="content-header">
         <div class="row">
@@ -120,7 +97,9 @@
                                                         class="btn btn-sm btn-green">
                                                         <i class="icon-pencil3"></i> edit
                                                     </a>
-                                                    <form action="{{ route('dusun.destroy', $item->id) }}">
+                                                    <form action="{{ route('dusun.destroy', $item->id) }}" method="POST">
+                                                        @csrf
+                                                        @method('DELETE')
                                                         <button type="submit" class="btn btn-sm btn-danger "
                                                             title="Hapus Data">
                                                             <i class="icon-trash3"></i>
@@ -146,11 +125,11 @@
                     <!-- </div> -->
                 </div>
 
-                <div class="card-block pr-0">
+                {{-- <div class="card-block pr-0">
                     <nav aria-label="Page navigation" class="text-xs-right">
                         {!! $dusun->links() !!}
                     </nav>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
