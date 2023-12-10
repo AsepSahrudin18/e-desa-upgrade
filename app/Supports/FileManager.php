@@ -3,6 +3,7 @@
 namespace App\Supports;
 
 use App\Models\File;
+use Illuminate\Support\Str;
 
 class FileManager
 {
@@ -35,7 +36,7 @@ class FileManager
 	public function getFileName($files)
 	{
 		$extension      = $files->getClientOriginalExtension();
-	    $fileName       = str_random(8) . '.' . $extension;
+	    $fileName       = Str::random(8) . '.' . $extension;
 	    $files->move("storages/", $fileName);
 	    return $fileName;
 	}
