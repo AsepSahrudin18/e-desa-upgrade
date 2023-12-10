@@ -82,7 +82,7 @@ class SupportController extends Controller
     }
 
     public function fileKematian($id, $array){
-        $file       = public_path('storages/dokumen/surat_kematiann.rtf');
+        $file       = public_path('storages/dokumen/surat_kematian.rtf');
         $nama_file  = 'surat-kematian.doc';
         
         return WordTemplate::export($file, $array, $nama_file);
