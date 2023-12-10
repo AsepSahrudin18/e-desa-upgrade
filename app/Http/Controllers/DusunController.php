@@ -16,9 +16,7 @@ class DusunController extends Controller
 
     public function index()
     {
-    	// $dusun = $this->dusun->paginate(10);
-        $dusun = Dusun::latest()->paginate();
-
+    	$dusun = $this->dusun->paginate(10);
     	return view('dusun.index', compact('dusun'));
     }
 
