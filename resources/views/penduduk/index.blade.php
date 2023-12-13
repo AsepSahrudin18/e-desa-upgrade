@@ -85,7 +85,7 @@
                                         <th>Jenis Kelamin</th>
                                         <th>Nama Dusun</th>
                                         <th>RT / RW</th>
-                                        <th>Kelurahan</th>
+                                        <th>Kelurahan/Desa</th>
                                         <th>Kecamatan</th>
                                         <th>Agama</th>
                                         <th>Status</th>
