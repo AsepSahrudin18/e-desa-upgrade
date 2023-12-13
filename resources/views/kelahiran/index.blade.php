@@ -115,12 +115,15 @@
                                                     <i class="icon-file2"></i> Unduh Surat
                                                 </a>
                                             @else
-                                                 <a href="{{route('persetujuan',[$item->id, 'kelahiran', 'setuju'])}}" class="btn btn-sm btn-info">
+                                            @if ($item->alasan_persetujuan != 'Disetujui')
+                                                <a href="{{route('persetujuan',[$item->id, 'kelahiran', 'setuju'])}}" class="btn btn-sm btn-info">
                                                     <i class="icon-check2"></i> Setujui
                                                 </a>
+                                                @else
                                                 <a href="{{route('persetujuan', [$item->id, 'kelahiran', 'tidak'])}}" class="btn btn-sm btn-danger">
                                                     <i class="icon-cross2"></i> Tidak Setujui
                                                 </a>
+                                                @endif
                                             @endif
                                             @if(Auth::user()->role == 'pegawai')
                                             <a href="{{route('kelahiran.edit',$item->id)}}" class="btn btn-sm btn-green">
