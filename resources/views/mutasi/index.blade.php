@@ -48,7 +48,7 @@
                                     <th>status Mutasi</th>
                                     <th>Alasan</th>
                                     <th>Persetujuan</th>
-                                    @if(Auth::user()->role == 'kepala')
+                                    @if(Auth::user()->role == 'admin')
                                     <th>Lampiran</th>
                                     @endif
                                     {{-- @if(Auth::user()->permission_actions) --}}
@@ -66,7 +66,7 @@
                                         <td>{{$item->status_mutasi}}</td>
                                         <td>{{$item->alasan}}</td>
                                         <td>{{$item->alasan_persetujuan}}</td>
-                                        @if(Auth::user()->role == 'kepala')
+                                        @if(Auth::user()->role == 'admin')
                                         <td class="valign-middle">
                                             @foreach($file[$item->id] as $index => $value)
                                             <a href="{{asset('storages')}}/{{$value}}" class="btn btn-sm btn-success">Lampiran {{$index + 1}}</a>

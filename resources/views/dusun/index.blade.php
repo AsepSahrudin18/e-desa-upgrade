@@ -7,7 +7,7 @@
                 {{-- @include('_layout.breadcrumb') --}}
             </div>
             <div class="col-md-6">
-                @if (Auth::user()->role == 'pegawai')
+                @if (Auth::user()->role == 'user')
                     <a href="{{ url('dusun/create') }}" class="btn btn-primary float-md-right mt-0">
                         <i class="icon-plus3"></i> Tambah
                     </a>
@@ -80,7 +80,7 @@
                                         <th width="20">No.</th>
                                         <th>Nama</th>
                                         <th>Alamat</th>
-                                        @if (Auth::user()->role == 'pegawai')
+                                        @if (Auth::user()->role == 'user')
                                             <th width="180" class="text-xs-center">Actions</th>
                                         @endif
                                     </tr>
@@ -91,7 +91,7 @@
                                             <td>{{ $index + 1 }}</td>
                                             <td>{{ $item->nama }}</td>
                                             <td>{{ $item->alamat }}</td>
-                                            @if (Auth::user()->role == 'pegawai')
+                                            @if (Auth::user()->role == 'user')
                                                 <td class="text-xs-center">
                                                     <a href="{{ route('dusun.edit', $item->id) }}"
                                                         class="btn btn-sm btn-green">

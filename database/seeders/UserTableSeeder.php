@@ -17,14 +17,14 @@ class UserTableSeeder extends Seeder
     {
         User::insert([
         	[
-        		'username' 	=> 'kepala',
-        		'role' 		=> 'kepala',
-        		'password'	=> bcrypt('samarinda')
+        		'username' 	=> 'admin',
+        		'role' 		=> 'admin',
+        		'password'	=> bcrypt('admin')
         	],
         	[
-        		'username' 	=> 'pegawai',
-        		'role' 		=> 'pegawai',
-        		'password'	=> bcrypt('samarinda')
+        		'username' 	=> 'user',
+        		'role' 		=> 'user',
+        		'password'	=> bcrypt('user')
         	]
         ]);
     }

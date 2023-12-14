@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use DB;
 use Carbon\Carbon;
+use Faker\Factory as Faker;
 
 class DusunTableSeeder extends Seeder
 {
@@ -16,39 +17,18 @@ class DusunTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('dusun')->delete();
-        $dusun = [
-            [
-                'id' => 1,
-                'nama' => 'Sukoharjo',
-                'alamat' => 'Kp. Contoh Rt.05 Rw.06'
-            ],
-            [
-                'id' => 2,
-                'nama' => 'Sukoharjo',
-                'alamat' => 'Kp. Contoh Rt.05 Rw.06'
-            ],
-            [
-                'id' => 3,
-                'nama' => 'Sukoharjo',
-                'alamat' => 'Kp. Contoh Rt.05 Rw.06'
-            ],
-            [
-                'id' => 4,
-                'nama' => 'Sukoharjo',
-                'alamat' => 'Kp. Contoh Rt.05 Rw.06'
-            ],
-            [
-                'id' => 5,
-                'nama' => 'Sukoharjo',
-                'alamat' => 'Kp. Contoh Rt.05 Rw.06'
-            ],
-            [
-                'id' => 6,
-                'name' => 'Sukoharjo',
-                'alamat' => 'Kp. Contoh Rt.05 Rw.06'
-            ],
-        ];
+        $faker = Faker::create();
+
+        $dusun = [];
+
+        for ($i = 1; $i <= 6; $i++) {
+            $dusun[] = [
+                'id' => $i,
+                'nama' => $faker->unique()->city,
+                'alamat' => $faker->address,
+            ];
+        }
+
         DB::table('dusun')->insert($dusun);
     }
 }

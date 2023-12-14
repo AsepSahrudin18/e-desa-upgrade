@@ -7,7 +7,7 @@
                 {{-- @include('_layout.breadcrumb') --}}
             </div>
             <div class="col-md-6">
-                @if (Auth::user()->role == 'pegawai')
+                @if (Auth::user()->role == 'user')
                     <a href="{{ url('kartukeluarga/create') }}" class="btn btn-primary float-md-right mt-0">
                         <i class="icon-plus3"></i> Tambah
                     </a>
@@ -96,7 +96,7 @@
                                                     class="btn btn-sm btn-blue">
                                                     <i class="icon-menu5"></i> Detail
                                                 </a>
-                                                @if (Auth::user()->role == 'pegawai')
+                                                @if (Auth::user()->role == 'user')
                                                     <a href="{{ route('kartukeluarga.edit', $item->id) }}"
                                                         class="btn btn-sm btn-green">
                                                         <i class="icon-pencil3"></i> Edit

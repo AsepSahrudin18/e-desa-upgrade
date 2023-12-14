@@ -7,7 +7,7 @@
             {{-- @include('_layout.breadcrumb') --}}
         </div>
         <div class="col-md-6">
-            @if(Auth::user()->role == 'pegawai')
+            @if(Auth::user()->role == 'user')
             <a href="{{url('kelahiran/create')}}" class="btn btn-primary float-md-right mt-0">
                 <i class="icon-plus3"></i> Tambah
             </a>
@@ -84,7 +84,7 @@
                                     <th>Tanggal Kelahiran</th>
                                     <th>Jenis Kelamin</th>
                                     <th>Persetujuan</th>
-                                    @if(Auth::user()->role == 'kepala')
+                                    @if(Auth::user()->role == 'admin')
                                     <th>Lampiran</th>
                                     @endif
                                     {{-- @if(Auth::user()->permission_actions) --}}
@@ -102,7 +102,7 @@
                                         <td>{{$item->tanggal}}</td>
                                         <td>{{$item->jenis_kelamin}}</td>
                                         <td>{{$item->alasan_persetujuan}}</td>
-                                        @if(Auth::user()->role == 'kepala')
+                                        @if(Auth::user()->role == 'admin')
                                         <td class="valign-middle">
                                             @foreach($file[$item->id] as $index => $value)
                                             <a href="{{asset('storages')}}/{{$value}}" class="btn btn-sm btn-success">Lampiran {{$index + 1}}</a>
@@ -110,7 +110,7 @@
                                         </td>
                                         @endif
                                         <td class="text-xs-center">
-                                            @if(Auth::user()->role == 'pegawai')
+                                            @if(Auth::user()->role == 'user')
                                                 <a href="{{route('file', [$item->penduduk_id, 'kelahiran'])}}" class="btn btn-sm btn-info {{tombol_berkas($item->persetujuan)}}">
                                                     <i class="icon-file2"></i> Unduh Surat
                                                 </a>
@@ -125,7 +125,7 @@
                                                 </a>
                                                 @endif
                                             @endif
-                                            @if(Auth::user()->role == 'pegawai')
+                                            @if(Auth::user()->role == 'user')
                                             <a href="{{route('kelahiran.edit',$item->id)}}" class="btn btn-sm btn-green">
                                                 <i class="icon-pencil3"></i> Edit
                                             </a>
