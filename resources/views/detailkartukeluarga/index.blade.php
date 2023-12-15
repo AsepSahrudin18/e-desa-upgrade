@@ -21,9 +21,9 @@
 <div class="content-body">
     <div class="row">
         <div class="col-md-12">
+            <h4 class="card-title">Daftar Detail Kartu Keluarga</h4>
             <div class="card mb-0">
                 <div class="card-header">
-                    <h4 class="card-title">Daftar Detail Kartu Keluarga</h4>
                     <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
                     <div class="heading-elements">
                         <ul class="list-inline mb-0">

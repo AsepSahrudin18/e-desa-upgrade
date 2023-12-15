@@ -48,7 +48,7 @@
 								<div class="form-group row ">
 									<label for="nik" class="col-md-2 label-control">NIK</label>
 									<div class="col-md-10">
-										<input type="text" class="form-control" name="nik" required value="{{ old('nik') }}">
+										<input type="number" class="form-control" name="nik" required value="{{ old('nik') }}">
 										<div class="help-block font-small-3"></div>
 									</div>
 								</div>
@@ -64,7 +64,7 @@
 								<div class="form-group row ">
 									<label for="tempat_lahir" class="col-md-2 label-control">Tempat Lahir</label>
 									<div class="col-md-10">
-										<input type="text" class="form-control" name="tempat_lahir" required value="{{ old('tempat_lahir') }}">
+										<input type="text" class="form-control" name="tempat_lahir" placeholder="Contoh: Bandung" required value="{{ old('tempat_lahir') }}">
 										<div class="help-block font-small-3"></div>
 									</div>
 								</div>
@@ -113,7 +113,7 @@
 								<div class="form-group row ">
 									<label for="rt" class="col-md-2 label-control">RT</label>
 									<div class="col-md-10">
-										<input type="text" class="form-control" name="rt" required value="{{ old('rt') }}">
+										<input type="text" class="form-control" name="rt" placeholder="Contoh: 001" required value="{{ old('rt') }}">
 										<div class="help-block font-small-3"></div>
 									</div>
 								</div>
@@ -121,23 +121,23 @@
 								<div class="form-group row ">
 									<label for="rw" class="col-md-2 label-control">RW</label>
 									<div class="col-md-10">
-										<input type="text" class="form-control" name="rw" required value="{{ old('rw') }}">
+										<input type="text" class="form-control" name="rw" placeholder="Contoh: 008" required value="{{ old('rw') }}">
 										<div class="help-block font-small-3"></div>
 									</div>
 								</div>
 
 								<div class="form-group row ">
-									<label for="kelurahan" class="col-md-2 label-control">keluarahan</label>
+									<label for="kelurahan" class="col-md-2 label-control">Keluarahan/Desa</label>
 									<div class="col-md-10">
-										<input type="text" class="form-control" name="kelurahan" required value="{{ old('kelurahan') }}">
+										<input type="text" class="form-control" name="kelurahan" placeholder="Contoh: Desa Serangmekar / Kelurahan Serangmekar" required value="{{ old('kelurahan') }}">
 										<div class="help-block font-small-3"></div>
 									</div>
 								</div>
 
 								<div class="form-group row ">
-									<label for="kecamatan" class="col-md-2 label-control">kecamatan</label>
+									<label for="kecamatan" class="col-md-2 label-control">Kecamatan</label>
 									<div class="col-md-10">
-										<input type="text" class="form-control" name="kecamatan" required value="{{ old('kecamatan') }}">
+										<input type="text" class="form-control" name="kecamatan" placeholder="Contoh: Ciparay" required value="{{ old('kecamatan') }}">
 										<div class="help-block font-small-3"></div>
 									</div>
 								</div>
@@ -199,12 +199,12 @@
 								</div>
 
 								<div class="form-group row position-relative">
-									<label class="col-md-2 label-control">Kepala Keluarga</label>
 									<div class="col-md-10">
 										<fieldset class="checkboxsas">
+											<label class="col-md-2 label-control">Kepala Keluarga?
 						                {{-- <label> --}}
 						                        <input type="checkbox" name="kk_status[]" value="1" {{old('kk_status') ? 'checked' : ''}}>
-						      			{{-- </label> --}}
+						      			{{-- </label> --}}</label>
 						            	</fieldset>
 									</div>
 								</div>

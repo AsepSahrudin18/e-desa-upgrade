@@ -18,9 +18,9 @@
     <div class="content-body">
         <div class="row">
             <div class="col-md-12">
+                <h4 class="card-title">Daftar Kematian</h4>
                 <div class="card mb-0">
                     <div class="card-header">
-                        <h4 class="card-title">Daftar Kematian</h4>
                         <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
                         <div class="heading-elements">
                             <ul class="list-inline mb-0">
@@ -117,14 +117,17 @@
                                                         <i class="icon-file2"></i> Unduh Surat
                                                     </a>
                                                 @else
+                                                @if ($item->alasan_persetujuan != 'Disetujui')
                                                     <a href="{{ route('persetujuan', [$item->id, 'kematian', 'setuju']) }}"
                                                         class="btn btn-sm btn-info">
                                                         <i class="icon-check2"></i> Setujui
                                                     </a>
+                                                    @else
                                                     <a href="{{ route('persetujuan', [$item->id, 'kematian', 'tidak']) }}"
                                                         class="btn btn-sm btn-danger">
                                                         <i class="icon-cross2"></i> Tidak Setujui
                                                     </a>
+                                                    @endif
                                                 @endif
                                                 @if (Auth::user()->role == 'pegawai')
                                                     <a href="{{ route('kematian.edit', $item->id) }}"

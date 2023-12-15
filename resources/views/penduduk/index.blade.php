@@ -18,9 +18,9 @@
     <div class="content-body">
         <div class="row">
             <div class="col-md-12">
+                <h4 class="card-title">Daftar Penduduk</h4>
                 <div class="card mb-0">
                     <div class="card-header">
-                        <h4 class="card-title">Daftar Penduduk</h4>
                         <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
                         <div class="heading-elements">
                             <ul class="list-inline mb-0">
@@ -85,7 +85,7 @@
                                         <th>Jenis Kelamin</th>
                                         <th>Nama Dusun</th>
                                         <th>RT / RW</th>
-                                        <th>Kelurahan</th>
+                                        <th>Kelurahan/Desa</th>
                                         <th>Kecamatan</th>
                                         <th>Agama</th>
                                         <th>Status</th>
