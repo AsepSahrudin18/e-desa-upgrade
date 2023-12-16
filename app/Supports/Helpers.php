@@ -27,3 +27,12 @@ if( ! function_exists('tombol_berkas') )
 		return $item == 1 ? '' : 'disabled' ;
 	}
 }
+
+if( ! function_exists('tombol_berkas_unduh') )
+{
+	function tombol_berkas_unduh($item){
+		return $item == 1 ? '' : 'isDisabled' ;
+	}
+}
+
+
