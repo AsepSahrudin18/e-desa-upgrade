@@ -76,9 +76,11 @@
                                         <td class="text-xs-center">
                                              @if(Auth::user()->role == 'pegawai')
                                                 @if($item->status_mutasi == 'pindah')
+                                                <span class="{{ tombol_berkas_unduh($item->persetujuan) }}">
                                                     <a href="{{route('file', [$item->penduduk_id, 'mutasi'])}}" class="btn btn-sm btn-info {{tombol_berkas($item->persetujuan)}}">
                                                         <i class="icon-file2"></i> Unduh Surat
                                                     </a>
+                                                </span>
                                                 @endif
                                             @else
                                                 @if($item->status_mutasi == 'pindah')

@@ -112,10 +112,12 @@
                                             @endif
                                             <td class="text-xs-center">
                                                 @if (Auth::user()->role == 'user')
+                                                <span class="{{ tombol_berkas_unduh($item->persetujuan) }}"> 
                                                     <a href="{{ route('file', [$item->penduduk_id, 'kematian']) }}"
                                                         class="btn btn-sm btn-info {{ tombol_berkas($item->persetujuan) }}">
                                                         <i class="icon-file2"></i> Unduh Surat
                                                     </a>
+                                                </span>
                                                 @else
                                                 @if ($item->alasan_persetujuan != 'Disetujui')
                                                     <a href="{{ route('persetujuan', [$item->id, 'kematian', 'setuju']) }}"
@@ -171,3 +173,4 @@
         </div>
     </div>
 @endsection
+
