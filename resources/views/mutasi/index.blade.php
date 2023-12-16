@@ -7,7 +7,7 @@
             {{-- @include('_layout.breadcrumb') --}}
         </div>
         <div class="col-md-6">
-            @if(Auth::user()->role == 'pegawai')
+            @if(Auth::user()->role == 'user')
             <a href="{{url('mutasi/create')}}" class="btn btn-primary float-md-right mt-0">
                 <i class="icon-plus3"></i> Tambah
             </a>
@@ -74,7 +74,7 @@
                                         </td>
                                         @endif
                                         <td class="text-xs-center">
-                                             @if(Auth::user()->role == 'pegawai')
+                                             @if(Auth::user()->role == 'user')
                                                 @if($item->status_mutasi == 'pindah')
                                                     <a href="{{route('file', [$item->penduduk_id, 'mutasi'])}}" class="btn btn-sm btn-info {{tombol_berkas($item->persetujuan)}}">
                                                         <i class="icon-file2"></i> Unduh Surat
@@ -93,7 +93,7 @@
                                                     @endif
                                                 @endif
                                             @endif
-                                            @if(Auth::user()->role == 'pegawai')
+                                            @if(Auth::user()->role == 'user')
                                             <a href="{{route('mutasi.edit',$item->id)}}" class="btn btn-sm btn-green">
                                                 <i class="icon-pencil3"></i> Edit
                                             </a>
