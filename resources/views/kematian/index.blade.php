@@ -7,7 +7,7 @@
                 {{-- @include('_layout.breadcrumb') --}}
             </div>
             <div class="col-md-6">
-                @if (Auth::user()->role == 'pegawai')
+                @if (Auth::user()->role == 'user')
                     <a href="{{ url('kematian/create') }}" class="btn btn-primary float-md-right mt-0">
                         <i class="icon-plus3"></i> Tambah
                     </a>
@@ -84,10 +84,10 @@
                                         <th width="10">Tanggal Kematian</th>
                                         <th width="10">Alasan</th>
                                         <th width="10">Persetujuan</th>
-                                        @if (Auth::user()->role == 'kepala')
+                                        @if (Auth::user()->role == 'admin')
                                             <th width="10">Lampiran</th>
                                         @endif
-                                        {{-- @if (Auth::user()->role == 'pegawai') --}}
+                                        {{-- @if (Auth::user()->role == 'user') --}}
                                         <th width="250" class="text-xs-center">Actions</th>
                                         {{-- @endif --}}
                                     </tr>
@@ -102,7 +102,7 @@
                                             <td class="valign-middle">{{ $item->tanggal }}</td>
                                             <td class="valign-middle">{{ $item->alasan }}</td>
                                             <td class="valign-middle">{{ $item->alasan_persetujuan }}</td>
-                                            @if (Auth::user()->role == 'kepala')
+                                            @if (Auth::user()->role == 'admin')
                                                 <td class="valign-middle">
                                                     @foreach ($file[$item->id] as $index => $value)
                                                         <a href="{{ asset('storages') }}/{{ $value }}"
@@ -111,11 +111,13 @@
                                                 </td>
                                             @endif
                                             <td class="text-xs-center">
-                                                @if (Auth::user()->role == 'pegawai')
+                                                @if (Auth::user()->role == 'user')
+                                                <span class="{{ tombol_berkas_unduh($item->persetujuan) }}"> 
                                                     <a href="{{ route('file', [$item->penduduk_id, 'kematian']) }}"
                                                         class="btn btn-sm btn-info {{ tombol_berkas($item->persetujuan) }}">
                                                         <i class="icon-file2"></i> Unduh Surat
                                                     </a>
+                                                </span>
                                                 @else
                                                 @if ($item->alasan_persetujuan != 'Disetujui')
                                                     <a href="{{ route('persetujuan', [$item->id, 'kematian', 'setuju']) }}"
@@ -129,7 +131,7 @@
                                                     </a>
                                                     @endif
                                                 @endif
-                                                @if (Auth::user()->role == 'pegawai')
+                                                @if (Auth::user()->role == 'user')
                                                     <a href="{{ route('kematian.edit', $item->id) }}"
                                                         class="btn btn-sm btn-green">
                                                         <i class="icon-pencil3"></i> Edit
@@ -171,3 +173,4 @@
         </div>
     </div>
 @endsection
+
