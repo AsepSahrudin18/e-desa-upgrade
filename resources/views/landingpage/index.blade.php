@@ -361,7 +361,7 @@
         <div class="col-md-6">
           <div class="map_container">
             <div class="map">
-              <div id="googleMap"></div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1961.668185556753!2d107.69752328085605!3d-7.0268404695919084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c1960929459d%3A0x30f0ae4778496acb!2skantor%20desa%20serangmekar!5e0!3m2!1sid!2sid!4v1702843631731!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
         </div>
@@ -418,10 +418,7 @@
   <script src="{{asset('frontend/js/bootstrap.js')}}"></script>
   <!-- custom js -->
   <script src="{{asset('frontend/js/custom.js')}}"></script>
-  <!-- Google Map -->
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
-  <!-- End Google Map -->
+
 
 </body>
 
