@@ -2,7 +2,7 @@
 
 ## Demo Aplikasi
 
-akhyarazamta.my.id
+[akhyarazamta.my.id](https://www.akhyarazamta.my.id/)
 
 # Cara Menggunakan GIT dengan Baik dan Benar
 
