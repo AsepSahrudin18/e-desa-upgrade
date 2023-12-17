@@ -72,7 +72,7 @@
                 <div class="card-block">
                     <div class="table-responsive bg-white">
                         <table class="table table-sm mb-0 table-bordered table-hover">
-                            <thead class="bg-primary bg-lighten text-white">
+                            <thead class="bg-landing-page bg-lighten text-white">
                             <!-- <thead class="bg-lighten"> -->
                                 <tr>
                                     <th width="10">No.</th>

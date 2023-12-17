@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="{{asset('robust/app-assets/css/bootstrap-extended.min.css')}}">
 <link rel="stylesheet" href="{{asset('robust/app-assets/css/app.min.css')}}">
 <link rel="stylesheet" href="{{asset('robust/app-assets/css/colors.min.css')}}">
+<link rel="stylesheet" href="{{asset('robust/app-assets/css/admin.css')}}">
 <!-- END ROBUST CSS-->
 <!-- BEGIN Page Level CSS-->
 <link rel="stylesheet" href="{{asset('robust/app-assets/css/core/menu/menu-types/vertical-menu.min.css')}}">
