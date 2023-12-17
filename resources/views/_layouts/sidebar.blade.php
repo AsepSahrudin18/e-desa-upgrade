@@ -58,6 +58,12 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a href="#" class="menu-item"><i class="fa-solid fa-street-view"></i> Wisata
+
+                    {{-- <span class="tag tag tag-primary tag-pill float-xs-right mr-2">5</span> --}}
+                </a>
+            </li>
+            <li class="nav-item">
                 <a href="{{ url('surat') }}" class="menu-item"><i class="icon-android-drafts"></i> Surat
                     {{-- <span class="tag tag tag-primary tag-pill float-xs-right mr-2">5</span> --}}
                 </a>

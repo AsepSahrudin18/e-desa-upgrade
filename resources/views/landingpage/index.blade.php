@@ -51,16 +51,16 @@
           <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
             <ul class="navbar-nav  ">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{{route('home')}}">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html"> Profil</a>
+                <a class="nav-link" href="#wisata-desa">Wisata</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="furniture.html">Wisata</a>
+                <a class="nav-link" href="#about-us"> About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
+                <a class="nav-link" href="#contact-us">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -146,7 +146,7 @@
                       <a href="" class="btn1">
                         Contact Us
                       </a>
-                      <a href="" class="btn2">
+                      <a href="#" class="btn2">
                         About Us
                       </a>
                     </div>
@@ -173,7 +173,7 @@
 
   <!-- furniture section -->
 
-  <section class="furniture_section layout_padding">
+  <section class="furniture_section layout_padding" id="wisata-desa">
     <div class="container">
       <div class="heading_container">
         <h2>
@@ -290,7 +290,7 @@
 
   <!-- about section -->
 
-  <section class="about_section layout_padding long_section">
+  <section class="about_section layout_padding long_section" id="about-us">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -327,7 +327,7 @@
   <!-- end client section -->
 
   <!-- contact section -->
-  <section class="contact_section  long_section">
+  <section class="contact_section  long_section" id="contact-us">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -393,23 +393,6 @@
             Lokasi
           </span>
         </a>
-      </div>
-
-      <div class="info_top ">
-        <div class="row ">
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="info_links">
-              <h4>
-                QUICK LINKS
-              </h4>
-              <div class="info_links_menu">
-                <a class="" href="index.html">Home <span class="sr-only">(current)</span></a>
-                <a class="" href="about.html">Tentang SID</a>
-                <a class="" href="contact.html">kontak</a>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
     </div>
