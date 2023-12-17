@@ -52,11 +52,10 @@ Route::get('/',function(){
   
       Route::get('persetujuan/{id}/{fungsi}/{kondisi}', [SupportController::class, 'persetujuan'])->name('persetujuan');
       Route::get('file/{id}/{fungsi}', [SupportController::class,'file'])->name('file');
-
-      
-      Route::get('home', function(){
-        return view('landingpage.index');
-      });
   });
   //auth laravel
   Auth::routes();
+
+  Route::get('home', function(){
+    return view('landingpage.index');
+  })->name('home');

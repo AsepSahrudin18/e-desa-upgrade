@@ -22,7 +22,7 @@
   <meta name="apple-touch-fullscreen" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="csrf-token" content="{{ csrf_token() }}" />
-
+<link rel="stylesheet" href="{{asset('robust/app-assets/css/custom.css')}}">
   @include('_layouts.script-top')
   @yield('script-top')
     
