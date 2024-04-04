@@ -328,7 +328,7 @@ a:focus {
 .furniture_section .box {
   margin-top: 45px;
   background-color: #f7fafa;
-  padding: 25px;
+  /* padding: 25px; */
   border-radius: 5px;
 }
 
@@ -343,7 +343,7 @@ a:focus {
       -ms-flex-align: center;
           align-items: center;
   height: 275px;
-  padding: 25px;
+  /* padding: 25px; */
 }
 
 .furniture_section .box .img-box img {
@@ -838,7 +838,7 @@ a:focus {
 
 .footer_section p {
   color: #000000;
-  padding: 25px 0;
+  padding: 14px 0;
   margin: 0;
 }
 

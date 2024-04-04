@@ -2,13 +2,13 @@
 
 ## Demo Aplikasi
 
-- Soon nanti di isi
+[akhyarazamta.my.id](https://www.akhyarazamta.my.id/)
 
 # Cara Menggunakan GIT dengan Baik dan Benar
 
 ## Cara Berkontribusi di Project Ini
 
-# Di Mohon jangan PUSH Langsung ke Branch "main"
+# Di Mohon jangan PUSH Langsung ke Branch "master"
 
 ## Cara Branching
 
@@ -44,11 +44,11 @@
 
 > `git stash`
 
-- 2 Setelah itu kamu perlu pull perubahan dari branch `main`
+- 2 Setelah itu kamu perlu pull perubahan dari branch `master`
 
-> `git pull origin main`
+> `git pull origin master`
 
-- 3 Setelah kamu berhasil melakukan pembaruan dari branch `main` selanjutnya kamu perlu mengembalikan pekerjaan mu sebelum nya yang ter-_stash_
+- 3 Setelah kamu berhasil melakukan pembaruan dari branch `master` selanjutnya kamu perlu mengembalikan pekerjaan mu sebelum nya yang ter-_stash_
 
 > `git stash pop`
 
@@ -58,11 +58,11 @@
 
 ## Cara Mengatasi Konflik Versi 2
 
-- 1 Pindah dulu ke Branch `main`
+- 1 Pindah dulu ke Branch `master`
 
-> `git checkout main`
+> `git checkout master`
 
-- 2 Kemudian pull perubahan terbaru dari branch `main`
+- 2 Kemudian pull perubahan terbaru dari branch `master`
 
 > `git pull`
 
@@ -70,9 +70,9 @@
 
 > `git checkout <branch mu>`
 
-- 4 Selanjutnya kita perlu merge perubahan terbaru dari `main`
+- 4 Selanjutnya kita perlu merge perubahan terbaru dari `master`
 
-> `git merge origin main`
+> `git merge origin master`
 
 ## Rekomendasi Kode Editor
 

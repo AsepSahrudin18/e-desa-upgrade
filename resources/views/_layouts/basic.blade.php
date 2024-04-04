@@ -7,7 +7,7 @@
   <meta name="description" content="Robust admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
   <meta name="keywords" content="admin template, robust admin template, dashboard template, flat admin template, responsive admin template, web app">
   <meta name="author" content="PIXINVENT">
-  <title>DESA DICODING</title>
+  <title>DESA SERANG MEKAR</title>
   {{-- 
   <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('robust/app-assets/images/ico/apple-icon-60.png') }}">
   <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('robust/app-assets/images/ico/apple-icon-76.png') }}">
@@ -22,7 +22,7 @@
   <meta name="apple-touch-fullscreen" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="csrf-token" content="{{ csrf_token() }}" />
-
+<link rel="stylesheet" href="{{asset('robust/app-assets/css/custom.css')}}">
   @include('_layouts.script-top')
   @yield('script-top')
     
